@@ -18,7 +18,7 @@ spec:
     image: nginx:1.19.0 # Image for second container
     ports:
       - containerPort: 80 # Defining what port to use.
-        hostport: 8090 
+        hostPort: 8090 
     volumeMounts:
     - name: shared-date-logs
       mountPath: /usr/share/nginx/html # Where nginx will serve the written file
