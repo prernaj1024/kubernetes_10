@@ -1,5 +1,3 @@
-hostport multiconatinerpod.yml
-
 apiVersion: v1
 kind: Pod
 metadata:
