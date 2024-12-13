@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name:  myvertexapp-rc
 spec:
-   replicas: 2
+   replicas: 3
    selector: 
      app:  myvertexapp
    template:                                     
