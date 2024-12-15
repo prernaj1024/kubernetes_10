@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myonlineapp-rs
+spec:
+   replicas: 3
+   selector:
+     matchExpressions:
+       - { key: app, operator: In, values: ["myonlineapp","webserver"] }
+   template:                                    
+     metadata:
+       name: nginx-my  
+       labels:
+          app: myonlineapp     # change to myonlineapp once and webserver once
+     spec:
+        containers:
+        - name: myonlineapp-container
+          image: nbktechnosys/myjavaimage11nov22:1
+          ports:
+          - containerPort: 8080
